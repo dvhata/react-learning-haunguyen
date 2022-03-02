@@ -1,32 +1,27 @@
-import React from 'react'
-import './ColorBox.scss'
+import React from "react";
+import "./ColorBox.scss";
 
+const initColorBox: string = localStorage.getItem("colorBox") || "red"
+console.log("init color box: " + initColorBox)
 
 export default function ColorBox() {
-    
-    const [color,setColor] = React.useState(() => {
-        const initColor = localStorage.getItem('box-color') || 'deep-pink';
-        return initColor;
-    });
+  const [color, setColor] = React.useState(initColorBox);
+  const colorArray = ["pink", "green", " blue", "purple", "yellow", "red"];
 
-    function getRandomColor() {
-        const COLOR_LIST = ['deeppink','yellow','green','orange','red'];
-        const randomIndex = Math.trunc(Math.random() * COLOR_LIST.length);
-        return COLOR_LIST[randomIndex];
-    }
-
-    const handleBoxClick = React.useCallback((e) => {
-        
-        //get random color -> set color
-        const newColor = getRandomColor();
-        setColor(newColor);
-        
-    },[])
-
-    return (
-        <div className="color-box" style={{backgroundColor:color}} onClick={handleBoxClick}>
-            COLOR BOX
-        </div>
-    )
+  const handleOnClickColorBox = () => {
+    let i = Math.floor(Math.random() * colorArray.length);
+    console.log(i + color);
+    localStorage.setItem("colorBox",color)
+    setColor(colorArray[i]);
+  };
+  return (
+    <div>
+      <h3> ----- Click for changing color box ------ </h3>
+      <div
+        onClick={handleOnClickColorBox}
+        className="color-box"
+        style={{ backgroundColor: color }}
+      ></div>
+    </div>
+  );
 }
-
