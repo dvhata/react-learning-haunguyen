@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import ColorBox from './components/ColorBox/ColorBox';
-import ShowLocalStorage from './components/CustomHook/ShowLocalStorage';
+import ShowHook from './components/CustomHook/ShowHook';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <h1> USE STATE - Box color changing when click</h1>
       <ColorBox/>
       <h1> How to custom hook</h1>
-      <ShowLocalStorage/>
+      <ShowHook/>
     </div>
   );
 }
