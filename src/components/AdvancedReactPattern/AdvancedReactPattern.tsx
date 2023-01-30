@@ -5,18 +5,18 @@ const Button = (props: any) => {
   return (
     <div
       style={{ color: props.color, textDecoration: props.underline }}
-      onClick={() => setCount((i) => i + props.increement)}
+      onClick={() => setCount((i: number) => i + props.increament)}
     >
       Iam a button with count = {count}
     </div>
   );
 };
 export default function AdvancedReactPattern() {
-  //   const props = {
-  //     underline: true,
-  //     increament: 2,
-  //     color: "black",
-  //   };
+  const props = {
+    underline: true,
+    increament: 2,
+    color: "black",
+  };
 
   //   const obj  = {
   //     x = 1
@@ -25,9 +25,9 @@ export default function AdvancedReactPattern() {
   //JSX code -> React.createElement('Button', props: );
   return (
     <div>
-      <Button /* {...props} */ color="red" />
-      <Button /* {...props} */ color="black" />
-      <Button /* {...props} */ color="green" />
+      <Button {...props} color="red" />
+      <Button {...props} color="black" />
+      <Button {...props} color="green" />
     </div>
   );
 }

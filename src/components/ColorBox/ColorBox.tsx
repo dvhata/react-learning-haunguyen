@@ -1,8 +1,8 @@
 import React from "react";
 import "./ColorBox.scss";
 
-const initColorBox: string = localStorage.getItem("colorBox") || "red"
-console.log("init color box: " + initColorBox)
+const initColorBox: string = localStorage.getItem("colorBox") || "red";
+// console.log("init color box: " + initColorBox)
 
 export default function ColorBox() {
   const [color, setColor] = React.useState(initColorBox);
@@ -10,8 +10,8 @@ export default function ColorBox() {
 
   const handleOnClickColorBox = () => {
     let i = Math.floor(Math.random() * colorArray.length);
-    console.log(i + color);
-    localStorage.setItem("colorBox",color)
+    // console.log(i + color);
+    localStorage.setItem("colorBox", color);
     setColor(colorArray[i]);
   };
   return (
