@@ -4,7 +4,10 @@ import { listData } from "./assets/listData";
 import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReactPattern";
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
+import Card from "./components/DragAndDrop/Card/Card";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
+
+const LessonCard = (item: any) => <Card item={item} />;
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
       </h1>
       <AdvancedReactPattern />
       <h1> IV. React drag and drop list </h1>
-      <DragAndDropList listData={listData} />
+      <DragAndDropList
+        listData={listData}
+        renderItemContent={(item) => LessonCard(item)}
+      />
     </div>
   );
 }

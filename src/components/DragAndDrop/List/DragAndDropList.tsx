@@ -5,15 +5,22 @@ import "./DragAndDrop.scss";
 
 export interface DragAndDropListProps {
   listData: any[];
+  renderItemContent: (item: any) => any;
 }
 
 export default function DragAndDropList(props: DragAndDropListProps) {
-  const { listData } = props;
+  const { listData, renderItemContent } = props;
   return (
     <div className="draggable">
       <ul className="draggable-list">
         {listData.map((item, index) => {
-          return <DragAndDropItem title={item?.title} img={item?.img} />;
+          return (
+            <DragAndDropItem
+              key={index}
+              item={item}
+              renderItemContent={renderItemContent}
+            />
+          );
         })}
       </ul>
     </div>

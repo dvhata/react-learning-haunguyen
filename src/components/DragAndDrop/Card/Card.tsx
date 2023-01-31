@@ -1,19 +1,19 @@
 import React from "react";
+import "./Card.scss";
 
 export interface CardProps {
-  title: string;
-  img: any;
+  item: any;
 }
 
 export default function Card(props: CardProps) {
-  const { title, img } = props;
+  const { item } = props;
   return (
     <div className="card">
       <div className="card__img">
-        <img src={img} alt="" />
+        <img src={item?.img} alt="" />
       </div>
       <div className="card__title">
-        <p>{title}</p>
+        <p>{item?.title}</p>
       </div>
     </div>
   );
