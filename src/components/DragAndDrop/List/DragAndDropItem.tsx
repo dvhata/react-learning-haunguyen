@@ -9,11 +9,17 @@ export default function DragAndDropItem(props: DragAndDropItemProps) {
   const { renderItemContent, item } = props;
 
   const onDragStart = React.useCallback((e) => {
-    console.log(e);
+    // remove default drag ghost
+    e.dataTransfer.effectedAllowed = "moved"; // https://docs.w3cub.com/dom/datatransfer/effectallowed
+    e.dataTransfer.setDragImage(e.target, 50000, 50000);
+    // custom drag ghost
+    let ghostNode = e.target.cloneNode(true);
+    ghostNode.style.position = "absolute";
+    document.body.prepend(ghostNode);
   }, []);
 
   const onDragEnd = React.useCallback((e) => {
-    console.log(e);
+    console.log(e.target);
   }, []);
 
   return (
@@ -21,7 +27,7 @@ export default function DragAndDropItem(props: DragAndDropItemProps) {
       className="draggable-list__item"
       draggable
       onDragStart={onDragStart}
-      onDragEnd={onDragEnd}
+      // onDragEnd={onDragEnd}
     >
       {renderItemContent(item)}
     </li>
