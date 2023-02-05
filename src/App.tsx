@@ -4,7 +4,7 @@ import { listData } from "./assets/listData";
 import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReactPattern";
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
-import DragAndDrop from "./components/DragAndDrop/DragAndDropList";
+import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       </h1>
       <AdvancedReactPattern />
       <h1> IV. React drag and drop list </h1>
-      <DragAndDrop listData={listData} />
+      <DragAndDropList listData={listData} />
       <h1> V. Todo List </h1>
       <TodoList />
     </div>

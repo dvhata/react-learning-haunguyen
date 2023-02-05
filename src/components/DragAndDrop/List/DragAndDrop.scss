@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+}
+
+.draggable {
+  align-items: flex-start !important;
+  width: 50%;
+}
+
+.draggable-list__item {
+  padding: 10px 0;
+}
