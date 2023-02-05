@@ -5,6 +5,7 @@ import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReac
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDrop from "./components/DragAndDrop/DragAndDropList";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <AdvancedReactPattern />
       <h1> IV. React drag and drop list </h1>
       <DragAndDrop listData={listData} />
+      <h1> V. Todo List </h1>
+      <TodoList />
     </div>
   );
 }

@@ -11,7 +11,9 @@ export default function DragAndDropList(props: DragAndDropListProps) {
   return (
     <ul className="draggable-list">
       {listData.map((item, index) => {
-        <DragAndDropItem title={item?.title} img={item?.img} />;
+        return (
+          <DragAndDropItem key={index} title={item?.title} img={item?.img} />
+        );
       })}
     </ul>
   );
