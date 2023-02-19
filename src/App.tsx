@@ -5,6 +5,7 @@ import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReac
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
+import HereMap from "./components/HereMap/HereMap";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <DragAndDropList listData={listData} />
       <h1> V. Todo List </h1>
       <TodoList />
+      <h1> VI. Here map </h1>
+      <HereMap />
     </div>
   );
 }

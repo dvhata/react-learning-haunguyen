@@ -2,11 +2,11 @@ import React from "react";
 import "../Card/Card.scss";
 export interface DragAndDropItemProps {
   item: Object;
-  renderItemContent: (item: any) => JSX.Element;
+  // renderItemContent: (item: any) => JSX.Element;
 }
 
 export default function DragAndDropItem(props: DragAndDropItemProps) {
-  const { renderItemContent, item } = props;
+  const { /*  renderItemContent, */ item } = props;
 
   const onDragStart = React.useCallback((e) => {
     // remove default drag ghost
@@ -29,7 +29,7 @@ export default function DragAndDropItem(props: DragAndDropItemProps) {
       onDragStart={onDragStart}
       // onDragEnd={onDragEnd}
     >
-      {renderItemContent(item)}
+      {/* renderItemContent(item) */}
     </li>
   );
 }

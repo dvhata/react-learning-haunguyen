@@ -5,11 +5,11 @@ import "./DragAndDrop.scss";
 
 export interface DragAndDropListProps {
   listData: any[];
-  renderItemContent: (item: any) => any;
+  // renderItemContent: (item: any) => any;
 }
 
 export default function DragAndDropList(props: DragAndDropListProps) {
-  const { listData, renderItemContent } = props;
+  const { listData /* , renderItemContent */ } = props;
   return (
     <div className="draggable">
       <ul className="draggable-list">
@@ -18,7 +18,7 @@ export default function DragAndDropList(props: DragAndDropListProps) {
             <DragAndDropItem
               key={index}
               item={item}
-              renderItemContent={renderItemContent}
+              // renderItemContent={renderItemContent}
             />
           );
         })}
