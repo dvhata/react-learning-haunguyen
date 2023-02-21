@@ -6,7 +6,9 @@ import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
 import HereMap from "./components/HereMap/HereMap";
+import TicTacToe from "./components/TicTacToe/TicTacToe";
 import TodoList from "./components/TodoList/TodoList";
+import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <TodoList />
       <h1> VI. Here map </h1>
       <HereMap />
+      <h1> VII. Tic Tac Toe </h1>
+      <TicTacToeBoard />
     </div>
   );
 }
