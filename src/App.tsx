@@ -6,9 +6,9 @@ import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
 import HereMap from "./components/HereMap/HereMap";
+import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
 import TicTacToe from "./components/TicTacToe/TicTacToe";
 import TodoList from "./components/TodoList/TodoList";
-import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
 
 function App() {
   return (
