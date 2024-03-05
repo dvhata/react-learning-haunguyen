@@ -64,7 +64,7 @@ function App() {
         );
       })} */}
       <h1>9. State và lifecycle trong class component</h1>
-      <Clock />
+      <Clock name="casio" />
     </div>
   );
 }
