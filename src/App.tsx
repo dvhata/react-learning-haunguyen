@@ -34,6 +34,7 @@ const animals = [
 ];
 
 function App() {
+  const [visible, setVisible] = React.useState<boolean>();
   return (
     <div className="wrapper">
       {/* <h1> 1. USE STATE - Box color changing when click</h1>
@@ -64,7 +65,14 @@ function App() {
         );
       })} */}
       <h1>9. State và lifecycle trong class component</h1>
-      <Clock name="casio" />
+      <button
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        Hide Clock component
+      </button>
+      {visible && <Clock name="casio" />}
     </div>
   );
 }
