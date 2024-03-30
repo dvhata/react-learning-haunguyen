@@ -9,11 +9,11 @@ export default function ColorBox() {
   const colorArray = ["pink", "green", " blue", "purple", "yellow", "red"];
 
   const handleOnClickColorBox = () => {
-    let i = Math.floor(Math.random() * colorArray.length);
-    // console.log(i + color);
-    localStorage.setItem("colorBox", color);
-    setColor(colorArray[i]);
-  };
+    const i = Math.floor(Math.random() * colorArray.length);
+    const colorOutput = colorArray[i];
+    localStorage.setItem("colorBox", colorOutput);
+    setColor(colorOutput);
+};
   return (
     <div>
       <h3> ----- Click for changing color box ------ </h3>
