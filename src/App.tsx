@@ -5,10 +5,10 @@ import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReac
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
-import HereMap from "./components/HereMap/HereMap";
 import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
 import TicTacToe from "./components/TicTacToe/TicTacToe";
 import TodoList from "./components/TodoList/TodoList";
+import BareButton from "./components/DuocDev/BareButton";
 
 function App() {
   return (
@@ -18,7 +18,6 @@ function App() {
       <h1> II. How to custom hook</h1>
       <ShowHook />
       <h1>
-        {" "}
         III. Advanced React Patterns, Performance, Environment and Testing{" "}
       </h1>
       <AdvancedReactPattern />
@@ -26,10 +25,10 @@ function App() {
       <DragAndDropList listData={listData} />
       <h1> V. Todo List </h1>
       <TodoList />
-      <h1> VI. Here map </h1>
-      <HereMap />
-      <h1> VII. Tic Tac Toe </h1>
+      <h1> VI. Tic Tac Toe </h1>
       <TicTacToeBoard />
+      <h1> VII. DuocDev - event handler </h1>
+      <BareButton />
     </div>
   );
 }
