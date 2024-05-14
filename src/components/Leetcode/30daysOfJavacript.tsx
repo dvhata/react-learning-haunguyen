@@ -89,5 +89,23 @@ export default function ThirtyDaysOfJavacript() {
     });
     return sum;
   }
+
+  type F = (x: number) => number;
+
+  function compose(functions: F[]): F {
+    return function (x) {
+      let result: number = x;
+      let count = functions.length - 1;
+      while (count >= 0) {
+        result = functions[count](result);
+        count--;
+      }
+      return result;
+    };
+  }
+
+  const fn = compose([(x) => x + 1, (x) => 2 * x]);
+  fn(4); // 9
+
   return <div>30DaysOfJS</div>;
 }
