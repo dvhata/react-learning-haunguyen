@@ -5,7 +5,6 @@ import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReac
 import ColorBox from "./components/ColorBox/ColorBox";
 import ShowHook from "./components/CustomHook/ShowHook";
 import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
-import HereMap from "./components/HereMap/HereMap";
 import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
 import TicTacToe from "./components/TicTacToe/TicTacToe";
 import TodoList from "./components/TodoList/TodoList";
@@ -13,32 +12,37 @@ import AnimalCard from "./components/AnimalCard/AnimalCard";
 import Clock from "./components/ClassComponent/Clock";
 import BareInput from "./components/ClassComponent/BareInput";
 import RenderUIParent from "./components/LiftingUpState/RenderUIParent";
+import BareButton from "./components/DuocDev/BareButton";
+import LoginControl from "./components/DuocDev/LoginControl";
+import ThirtyDaysOfJavacript from "./components/Leetcode/30daysOfJavacript";
+import UncontrolledComponent from "./components/DuocDev/UncontrolledComponent";
 
-const animals = [
-  {
-    name: "Lion",
-    scientificName: "Panthero leo",
-    size: 140,
-    diet: ["meat"],
-  },
-  {
-    name: "Gorilla",
-    scientificName: "Gorilla beringei",
-    size: 205,
-    diet: ["plants", "insects"],
-  },
-  {
-    name: "Zebra",
-    scientificName: "Equus quagga",
-    size: 322,
-    diet: ["plants"],
-  },
-];
+// const animals = [
+//   {
+//     name: "Lion",
+//     scientificName: "Panthero leo",
+//     size: 140,
+//     diet: ["meat"],
+//   },
+//   {
+//     name: "Gorilla",
+//     scientificName: "Gorilla beringei",
+//     size: 205,
+//     diet: ["plants", "insects"],
+//   },
+//   {
+//     name: "Zebra",
+//     scientificName: "Equus quagga",
+//     size: 322,
+//     diet: ["plants"],
+//   },
+// ];
 
 function App() {
   const [visible, setVisible] = React.useState<boolean>();
   return (
     <div className="wrapper">
+      <ThirtyDaysOfJavacript />
       {/* <h1> 1. USE STATE - Box color changing when click</h1>
       <ColorBox />
       <h1> 2. How to custom hook</h1>
