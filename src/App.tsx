@@ -11,6 +11,8 @@ import TicTacToe from "./components/TicTacToe/TicTacToe";
 import TodoList from "./components/TodoList/TodoList";
 import AnimalCard from "./components/AnimalCard/AnimalCard";
 import Clock from "./components/ClassComponent/Clock";
+import BareInput from "./components/ClassComponent/BareInput";
+import RenderUIParent from "./components/LiftingUpState/RenderUIParent";
 
 const animals = [
   {
@@ -64,7 +66,7 @@ function App() {
           />
         );
       })} */}
-      <h1>9. State và lifecycle trong class component</h1>
+      {/* <h1>9. State và lifecycle trong class component</h1>
       <button
         onClick={() => {
           setVisible(!visible);
@@ -72,7 +74,17 @@ function App() {
       >
         Hide Clock component
       </button>
-      {visible && <Clock name="casio" />}
+      {visible && <Clock name="casio" />} */}
+      {/* <h1>10. Props and PropTypes</h1>
+      <BareInput
+        type="text"
+        value="100"
+        autoFocus
+        className="aa"
+        onChange={() => {}}
+      /> */}
+      <h1>Lifting up state</h1>
+      <RenderUIParent />
     </div>
   );
 }
