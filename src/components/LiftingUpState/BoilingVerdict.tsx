@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Predict(props: any) {
+export default function BoilingVerdict(props: any) {
   const { temperature } = props;
   return (
     <>
