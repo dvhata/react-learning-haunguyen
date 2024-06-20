@@ -14,14 +14,14 @@ export default function RenderUIParent() {
 
   const tryConvert = React.useCallback((temperature, scale) => {
     if (!temperature) return "";
-    if (scale === "C")
-      return Math.round(((Number(temperature) - 32) / 1.8) * 1000) / 1000;
     if (scale === "F")
+      return Math.round(((Number(temperature) - 32) / 1.8) * 1000) / 1000;
+    if (scale === "C")
       return Math.round((Number(temperature) * 1.8 + 32) * 1000) / 1000;
   }, []);
 
-  const celcius = scale === "C" ? tryConvert(temperature, "F") : temperature;
-  const falharen = scale === "C" ? tryConvert(temperature, "F") : temperature;
+  const celcius = scale === "F" ? tryConvert(temperature, scale) : temperature;
+  const falharen = scale === "C" ? tryConvert(temperature, scale) : temperature;
 
   return (
     <>

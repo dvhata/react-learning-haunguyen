@@ -6,7 +6,7 @@ export default function Temperature(props: any) {
 
   return (
     <>
-      <label htmlFor={`Độ ${scale}`}></label>
+      <span>Độ {scale}</span>
       <input
         value={temperature}
         name={`Độ ${scale}`}
