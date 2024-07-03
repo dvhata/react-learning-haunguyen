@@ -16,6 +16,7 @@ import BareButton from "./components/DuocDev/BareButton";
 import LoginControl from "./components/DuocDev/LoginControl";
 import ThirtyDaysOfJavacript from "./components/Leetcode/30daysOfJavacript";
 import UncontrolledComponent from "./components/DuocDev/UncontrolledComponent";
+import ProductList from "./components/ThinkingInReact/ProductList";
 
 // const animals = [
 //   {
@@ -87,8 +88,10 @@ function App() {
         className="aa"
         onChange={() => {}}
       /> */}
-      <h1>Lifting up state</h1>
-      <RenderUIParent />
+      {/* <h1>Lifting up state</h1>
+      <RenderUIParent /> */}
+      <h1 className="">Thinking in React</h1>
+      <ProductList />
     </div>
   );
 }
