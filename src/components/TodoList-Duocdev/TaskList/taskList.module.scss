@@ -1,0 +1,44 @@
+.title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  // add spacing between each task except the last one
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .taskCheckbox {
+    flex: 0 0 10%; // flex-basis: // The item’s initial size will be 10% of the container's size.
+    height: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .taskName {
+    flex: 0 0 70%;
+    font-size: 1.5rem;
+    padding: 0 0 0 0.5rem;
+    margin-top: 0.5rem;
+    &.taskNameDone {
+      text-decoration: line-through;
+      color: rgba(0, 0, 0, 0.205);
+    }
+  }
+
+  .taskActions {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: space-between; //  add space to element
+    .taskBtn {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      font-size: 2rem;
+      border-radius: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  input {
+    height: 4rem;
+    flex-grow: 1; // Determines how much a flex item expands when extra space is available
+    margin-right: 1rem;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    border-width: 1px;
+    border: 1px solid #00000070;
+    outline: none;
+  }
+  input::placeholder {
+    color: #888;
+    font-size: 1.5rem;
+  }
+
+  input:focus {
+    border: 2px solid #000; /* Keep the border style the same */
+    outline: none; /* Ensure no outline on focus */
+  }
+  button {
+    flex-shrink: 0; // Determines how much a flex item expands when extra space is available.
+    width: 5rem;
+    height: 4rem;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-width: 1px;
+  }
+}

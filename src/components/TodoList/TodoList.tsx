@@ -1,31 +1,22 @@
 import React from "react";
 import "./TodoList.scss";
+import TodoTask from "./TodoTask";
+import { TodoListProps } from "../../App";
 
-export default function TodoList() {
-  const [taskInput, setTaskInput] = React.useState<string>();
-  const [newTask, setNewTask] = React.useState<string>();
+export interface TodoTaskProps {
+  id: string;
+  name: string;
+  handleDeleteTask?: (taskName: string) => void;
+  handleEditTask?: (id: string, taskName: string) => void;
+}
 
-  const handleGetTask = React.useCallback((e) => {
-    setTaskInput(taskInput);
-  }, []);
-
-  const handleAddTask = React.useCallback((e) => {
-    setNewTask(taskInput);
-  }, []);
-
-  React.useEffect(() => {
-    console.log(newTask);
-  }, []);
-
-  React;
+export default function TodoList(props: TodoListProps) {
+  const {taskList, handleDeleteTask, handleEditTask} = props;
 
   return (
     <div className="to-do-list">
       <div className="add-task">
-        <input onChange={handleAddTask} className="add-task__input" />
-        <button onChange={handleGetTask} className="add-task__button">
-          Add task
-        </button>
+        {taskList?.length > 0 && taskList?.map((item) => {return <TodoTask key={item.id}  id={item.id} name={item.name} handleDeleteTask={handleDeleteTask} handleEditTask={handleEditTask}/>} ) }
       </div>
     </div>
   );

@@ -1,22 +1,7 @@
-import React from "react";
 import "./App.scss";
-import { listData } from "./assets/listData";
-import AdvancedReactPattern from "./components/AdvancedReactPattern/AdvancedReactPattern";
-import ColorBox from "./components/ColorBox/ColorBox";
-import ShowHook from "./components/CustomHook/ShowHook";
-import DragAndDropList from "./components/DragAndDrop/List/DragAndDropList";
-import TicTacToeBoard from "./components/TicTacToe/TicTacToe";
-import TicTacToe from "./components/TicTacToe/TicTacToe";
-import TodoList from "./components/TodoList/TodoList";
-import AnimalCard from "./components/AnimalCard/AnimalCard";
-import Clock from "./components/ClassComponent/Clock";
-import BareInput from "./components/ClassComponent/BareInput";
-import RenderUIParent from "./components/LiftingUpState/RenderUIParent";
-import BareButton from "./components/DuocDev/BareButton";
-import LoginControl from "./components/DuocDev/LoginControl";
 import ThirtyDaysOfJavacript from "./components/Leetcode/30daysOfJavacript";
-import UncontrolledComponent from "./components/DuocDev/UncontrolledComponent";
-import ProductList from "./components/ThinkingInReact/ProductList";
+import TodoListDuocdev from "./components/TodoList-Duocdev/TodoListDuocdev/TodoListDuocdev";
+import { TodoTaskProps } from "./components/TodoList/TodoList";
 
 // const animals = [
 //   {
@@ -39,8 +24,56 @@ import ProductList from "./components/ThinkingInReact/ProductList";
 //   },
 // ];
 
+export interface TodoListProps {
+  taskList: TodoTaskProps[];
+  handleDeleteTask?: (taskName: string) => void;
+  handleEditTask?: (id: string, taskName: string) => void;
+}
+
+const TODO_LIST_KEY = "taskList";
 function App() {
-  const [visible, setVisible] = React.useState<boolean>();
+  // const [visiblse, setVisible] = React.useState<boolean>();
+  // const [taskList, setTaskList] = React.useState<TodoTaskProps[]>(
+  //   localStorage.getItem("taskList")
+  //     ? JSON.parse(localStorage.getItem(TODO_LIST_KEY) || "")
+  //     : []
+  // );
+  // const [textInput, setTextInput] = React.useState<string>("");
+  // const inputRef = React.useRef<HTMLInputElement>(null);
+
+  // const handleAddTask = React.useCallback(() => {
+  //   if (textInput) {
+  //     setTaskList([
+  //       ...taskList,
+  //       { id: (taskList?.length + 1).toString(), name: textInput },
+  //     ]);
+  //     setTextInput("");
+  //   }
+  //   inputRef.current?.focus();
+  // }, [textInput]);
+
+  // const handleDeleteTask = React.useCallback(
+  //   (taskName: string) => {
+  //     setTaskList(taskList.filter((item) => item.name !== taskName));
+  //   },
+  //   [taskList]
+  // );
+
+  // const handleEditTask = React.useCallback(
+  //   (id: string, newTaskName: string) => {
+  //     setTaskList(
+  //       taskList?.map((item) =>
+  //         item?.id === id ? { ...item, name: newTaskName } : item
+  //       )
+  //     );
+  //   },
+  //   []
+  // );
+
+  // React.useEffect(() => {
+  //   localStorage.setItem(TODO_LIST_KEY, JSON.stringify(taskList));
+  // }, [taskList]);
+
   return (
     <div className="wrapper">
       <ThirtyDaysOfJavacript />
@@ -90,8 +123,30 @@ function App() {
       /> */}
       {/* <h1>Lifting up state</h1>
       <RenderUIParent /> */}
-      <h1 className="">Thinking in React</h1>
+      {/* <h1 className="">Thinking in React</h1>
       <ProductList />
+      <FilterableProductTable /> */}
+      {/* <h1> 5. Todo List </h1>
+      <div className="to-do-list">
+        <div className="add-task">
+          <input
+            value={textInput}
+            onChange={(e) => setTextInput(e.target.value)}
+            ref={inputRef}
+            className="add-task__input"
+          />
+          <button onClick={handleAddTask} className="add-task__button">
+            Add task
+          </button>
+          <TodoList
+            taskList={taskList}
+            handleDeleteTask={handleDeleteTask}
+            handleEditTask={handleEditTask}
+          />
+        </div>
+      </div> */}
+      <h1> TodoList - Duocdev</h1>
+      <TodoListDuocdev />
     </div>
   );
 }

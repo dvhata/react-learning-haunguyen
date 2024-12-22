@@ -26,7 +26,7 @@ export default function ProductList() {
           {Object.entries(groupByCategory).map(([category, products]) => {
             return (
               <div>
-                <td>{category}</td>
+                <th colSpan={2}>{category}</th>
                 {products?.map((item: ProductType) => {
                   return (
                     <div>
