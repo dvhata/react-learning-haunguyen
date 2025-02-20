@@ -2,6 +2,7 @@ import "./App.scss";
 import ThirtyDaysOfJavacript from "./components/Leetcode/30daysOfJavacript";
 import TodoListDuocdev from "./components/TodoList-Duocdev/TodoListDuocdev/TodoListDuocdev";
 import { TodoTaskProps } from "./components/TodoList/TodoList";
+import TodoListReducer from "./components/TodoList/TodoListReducer";
 
 // const animals = [
 //   {
@@ -145,8 +146,10 @@ function App() {
           />
         </div>
       </div> */}
-      <h1> TodoList - Duocdev</h1>
-      <TodoListDuocdev />
+      {/* <h1> TodoList - Duocdev</h1>
+      <TodoListDuocdev /> */}
+      <h1>TodoList - Reducer</h1>
+      <TodoListReducer />
     </div>
   );
 }
